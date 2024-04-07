@@ -1,3 +1,11 @@
+:root {
+    --light-purple: #B75CFF;
+    --middle-purple: #671AE4;
+    --dark-purple: #181E41;
+    --off-white: #E5E5E5;
+    --white: #FFFFFF;
+}
+
 * {
     margin: 0;
     padding : 0;
@@ -7,7 +15,7 @@
 body {
     height: 100vh;
     box-sizing: border-box;
-    background-color: #E5E5E5;
+    background-color: var(--off-white);
     font-family: 'Poppins';
     display: flex;
     flex-direction: column;
@@ -15,24 +23,24 @@ body {
 
 a {
     text-decoration-line: none;
-    color: #FFFFFF;
+    color: var(--white);
 }
 
 a:hover {
     font-weight: bold;
 }
 
-#header {
-    background-color: #B75CFF50;
+header {
+    background-color: var(--dark-purple);
     padding: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    color: #FFFFFF;
+    color: var(--white);
     align-items: center;
 }
 
-.infos {
+.header__info {
     padding-left: 50vh;
     display: flex;
     flex-direction: row;
@@ -44,8 +52,8 @@ a:hover {
     }
 }
 
-.contact {
-    background: linear-gradient(#B75CFF, #671AE4);
+.header__contact {
+    background: linear-gradient(var(--light-purple), var(--middle-purple));
     border-radius: 100px;
     width: 134px;
     height: 50px;
@@ -54,8 +62,14 @@ a:hover {
     align-items: center;
 }
 
+.header__contact:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
 #home {
-    background-color: #E5E5E5;
+    background-color: var(--off-white);
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
@@ -66,28 +80,37 @@ a:hover {
         font-size: 50px;
     }
     strong {
-        color: #B75CFF;
+        color: var(--light-purple);
     }
 }
 
-.container {
+.home__container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
-    padding: 30px;
+    width: 100%;
+    padding: 5% 10%; 
 
 }
 
-.container-home {
-    color: #ffffff;
+.home__container__circle {
+    color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     height: 100%;
-    padding: 40px;
+    padding: 4% 6%;
+    background: linear-gradient(#b75cff, #671ae4);
+    width: 200px;
+    height: 20px;
+    border-radius: 100px;
+}
+
+.home__container__photo img {
+    width: 300px;
+    height: auto;
 }
 
 #social-medias {
@@ -96,7 +119,7 @@ a:hover {
     justify-content: space-around;
     align-items: center;
     div {
-        background: #181E41;
+        background: var(--dark-purple);
         height: 130px;
         width: 100%;
         display: flex;
@@ -106,14 +129,14 @@ a:hover {
 }
 
 .about-me {
-    background: #B75CFF;
+    background: var(--light-purple);
     display: flex;
     flex-direction: row;
     justify-content: center;  
     align-items: flex-start;
     height: 350px;
     padding: 140px;
-    color: #ffffff;
+    color: var(--white);
     h1 {
         font-size: 50px;
     }
@@ -137,14 +160,14 @@ a:hover {
 }
 
 #projects a {
-    background: linear-gradient(#B75CFF, #671AE4);
+    background: linear-gradient(var(--light-purple), var(--middle-purple));
     height: 233px;
     width: 233px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    color: #ffffff;
+    color: var(--white);
     font-size: 30px;
     text-align: center;
     margin: 30px;
@@ -171,7 +194,7 @@ a:hover {
     width: 50%;
     height: 70%;
     padding-top: 40px;
-    color: #000000;
+    color: var(--dark-purple);
 }
 
 .writing h2 {
@@ -182,6 +205,6 @@ a:hover {
     max-width: 80%;
     font-size: 20px;
     padding-top: 20px;
-    color:#00000080;
+    color: var(--dark-purple);
     line-height: 1.5;
 }
